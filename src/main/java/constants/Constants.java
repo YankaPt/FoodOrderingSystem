@@ -20,7 +20,8 @@ public final class Constants {
     public static final String MAIN_COURSE_LIST = "For %s cuisine we have such main courses:";
     public static final String DESSERT_LIST = "For %s cuisine we have such desserts:";
     public static final String DRINK_LIST = "We have such drinks:";
-    public static final String WHICH_ONE_DO_YOU_WANT = "Which one do you want?";
+    public static final String WHICH_ONE_DO_YOU_WANT_SHORT = "Which one do you want?";
+    public static final String WHICH_ONE_DO_YOU_WANT_FULL = "Which one do you want? Please type name or number.";
     public static final String ICE_CUBES_SUGGESTION = "Do you want add ice cubes to your drink?[Yes/No]";
     public static final String LEMON_SUGGESTION = "Do you want add lemon to your drink?[Yes/No]";
     public static final String ORDER_INFO = """

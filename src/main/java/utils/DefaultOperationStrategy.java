@@ -38,7 +38,8 @@ import static constants.Constants.ORDER_INFO;
 import static constants.Constants.ORDER_PLACED;
 import static constants.Constants.SHORT_NO;
 import static constants.Constants.SHORT_YES;
-import static constants.Constants.WHICH_ONE_DO_YOU_WANT;
+import static constants.Constants.WHICH_ONE_DO_YOU_WANT_FULL;
+import static constants.Constants.WHICH_ONE_DO_YOU_WANT_SHORT;
 import static constants.Constants.YES;
 
 public class DefaultOperationStrategy implements OperationStrategy {
@@ -72,7 +73,7 @@ public class DefaultOperationStrategy implements OperationStrategy {
             case DESSERT -> System.out.println(DESSERT_CUISINE_SUGGESTION);
         }
         Arrays.stream(Cuisine.values()).forEach(System.out::println);
-        System.out.println(WHICH_ONE_DO_YOU_WANT);
+        System.out.println(WHICH_ONE_DO_YOU_WANT_SHORT);
         String cuisine = context.getScanner().nextLine().toLowerCase(CURRENT_LOCALE);
         try {
             Cuisine chosenCuisine = Cuisine.valueOf(cuisine.toUpperCase(CURRENT_LOCALE));
@@ -114,7 +115,7 @@ public class DefaultOperationStrategy implements OperationStrategy {
     }
 
     private void chooseFood(Context context, Map<Integer, ? extends Food> foodMap, FoodType foodType) {
-        System.out.println(WHICH_ONE_DO_YOU_WANT);
+        System.out.println(WHICH_ONE_DO_YOU_WANT_FULL);
         String chosenName = context.getScanner().nextLine();
         Optional<? extends Food> chosenFood = parseChosenFood(foodMap, chosenName);
         if (chosenFood.isEmpty()) {
